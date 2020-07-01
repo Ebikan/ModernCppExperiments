@@ -13,6 +13,8 @@
 
 ******************************************************************************/
 
+typedef long long COMP_ID;
+
 // Abstract Class
 class Component {
 
@@ -25,10 +27,11 @@ public:
 	Component(Component&&) = delete;
 	Component& operator=(Component&&) = delete;
 
+protected:
+	COMP_ID GetID() noexcept;
 
-
-
-
-
-
+private:
+	static COMP_ID id;
 };
+
+
