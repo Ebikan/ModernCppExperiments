@@ -18,7 +18,8 @@
 #include "Weapon.h"
 #include "GameObject.h"
 
-GameObject::GameObject() noexcept : id(1u), fData(0.f)
+GameObject::GameObject() noexcept : 
+	id(1u), fData(0.f), alive(false), destroy(false)
 {
 	Trace("ctor GO");
 }
