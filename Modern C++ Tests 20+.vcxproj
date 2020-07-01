@@ -155,6 +155,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="source\BaseException.cpp" />
     <ClCompile Include="source\Component.cpp" />
     <ClCompile Include="source\GameObject.cpp" />
     <ClCompile Include="source\GOManager.cpp" />
@@ -172,6 +173,7 @@
     <ClCompile Include="source\Weapon.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="source\BaseException.h" />
     <ClInclude Include="source\Component.h" />
     <ClInclude Include="source\GameObject.h" />
     <ClInclude Include="source\GOManager.h" />

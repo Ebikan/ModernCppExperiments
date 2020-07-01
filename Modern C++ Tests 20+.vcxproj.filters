@@ -25,6 +25,9 @@
     <Filter Include="Source Files\Component Architecture\Components">
       <UniqueIdentifier>{14bf39c0-81b4-4487-9b98-69a764101f1b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Exception">
+      <UniqueIdentifier>{4ca4a09c-0056-47e5-9335-758ef24e4495}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\main.cpp">
@@ -57,6 +60,9 @@
     <ClCompile Include="source\Trace.cpp">
       <Filter>Source Files\Tests</Filter>
     </ClCompile>
+    <ClCompile Include="source\BaseException.cpp">
+      <Filter>Source Files\Exception</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\GameObject.h">
@@ -85,6 +91,9 @@
     </ClInclude>
     <ClInclude Include="source\Trace.h">
       <Filter>Source Files\Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="source\BaseException.h">
+      <Filter>Source Files\Exception</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

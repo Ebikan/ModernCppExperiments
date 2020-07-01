@@ -13,16 +13,22 @@
 
 ******************************************************************************/
 
+// Abstract Class
+class Component {
 
-//class Component {
-//
-//public:
-//
-//	Component() noexcept;
-//	~Component() noexcept;
-//	Component(const Component&) = delete;
-//	Component& operator=(const Component&) = delete;
-//	Component(Component&&) = delete;
-//	Component& operator=(Component&&) = delete;
-//
-//};
+public:
+	
+	Component() = delete;
+	~Component() = delete;
+	Component(const Component&) = delete;
+	Component& operator=(const Component&) = delete;
+	Component(Component&&) = delete;
+	Component& operator=(Component&&) = delete;
+
+
+
+
+
+
+
+};
