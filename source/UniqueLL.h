@@ -1,7 +1,7 @@
 #pragma once
 /******************************************************************************
 
-	file:	UniqueLLTest.h
+	file:	UniqueLL.h
 
 	brief:	none
 
@@ -12,7 +12,7 @@
 	email:	evie@eviebrown.com
 
 ******************************************************************************/
-#include <memory>
+
 
 
 
@@ -32,7 +32,7 @@ public:
 public:
 
 	UniqueLL();
-	~UniqueLL() = default;
+	~UniqueLL();
 
 	void AddFront(int data);
 	void RemoveFront();
@@ -42,7 +42,6 @@ public:
 	
 	void print();
 
-	std::unique_ptr<Node> MakeNode(int data);
 
 private:
 	std::unique_ptr<Node> headNode;

@@ -1,21 +1,25 @@
-#include "stdafx.h"
+#pragma once
 /******************************************************************************
 
-	file:	main.cpp
+	file:	UniqueTests.h
 
 	brief:	none
 
-	date:	6/29/2020 10:31:08 PM
+	date:	6/30/2020 7:05:49 PM
 
 	author:	Evie Brown
 
 	email:	evie@eviebrown.com
 
 ******************************************************************************/
-#include "UniqueTests.h"
 
-int main(int args) {
-	UniqueTests tester;
-	tester.test1();
-	return 0;
-}
+
+class UniqueTests {
+
+public:
+	// Tests
+	void test1();
+
+private:
+	//std::unique_ptr<class UniqueLL> ll = nullptr;
+};

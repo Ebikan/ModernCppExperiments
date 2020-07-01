@@ -1,6 +1,7 @@
+#include "stdafx.h"
 /******************************************************************************
 
-	file:	UniqueLLTest.cpp
+	file:	UniqueLL.cpp
 
 	brief:	none
 
@@ -14,7 +15,7 @@
 
 
 #include <iostream>
-#include "UniqueLLTest.h"
+#include "UniqueLL.h"
 
 
 UniqueLL::Node::Node() : data(0), next(nullptr)
@@ -44,7 +45,10 @@ UniqueLL::UniqueLL()
 	std::cout << "LLctor" << std::endl;
 	headNode = nullptr;
 }
-
+UniqueLL::~UniqueLL()
+{
+	std::cout << "LLdtor" << std::endl;
+}
 
 void UniqueLL::AddFront(int data)
 {

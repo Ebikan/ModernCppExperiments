@@ -13,18 +13,66 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\Tests">
+      <UniqueIdentifier>{37460872-c423-40d5-af71-a5c881af8541}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Structures">
+      <UniqueIdentifier>{b14c2b46-88ff-41b9-bacd-ee2c2304401b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Component Architecture">
+      <UniqueIdentifier>{ea70f28b-b434-4e18-a69f-fb39627b37e8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="source\UniqueLLTest.cpp">
+    <ClCompile Include="source\UniqueTests.cpp">
+      <Filter>Source Files\Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="source\GameObject.cpp">
+      <Filter>Source Files\Component Architecture</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Component.cpp">
+      <Filter>Source Files\Component Architecture</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Transform.cpp">
+      <Filter>Source Files\Component Architecture</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Weapon.cpp">
+      <Filter>Source Files\Component Architecture</Filter>
+    </ClCompile>
+    <ClCompile Include="source\stdafx.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\UniqueLL.cpp">
+      <Filter>Source Files\Structures</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="source\UniqueLLTest.h">
+    <ClInclude Include="source\UniqueTests.h">
+      <Filter>Source Files\Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="source\GameObject.h">
+      <Filter>Source Files\Component Architecture</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Component.h">
+      <Filter>Source Files\Component Architecture</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Transform.h">
+      <Filter>Source Files\Component Architecture</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Weapon.h">
+      <Filter>Source Files\Component Architecture</Filter>
+    </ClInclude>
+    <ClInclude Include="source\stdafx.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="source\UniqueLL.h">
+      <Filter>Source Files\Structures</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>

@@ -1,21 +1,19 @@
 #include "stdafx.h"
 /******************************************************************************
 
-	file:	main.cpp
+	file:	Component.cpp
 
 	brief:	none
 
-	date:	6/29/2020 10:31:08 PM
+	date:	7/1/2020 11:13:04 AM
 
 	author:	Evie Brown
 
 	email:	evie@eviebrown.com
 
 ******************************************************************************/
-#include "UniqueTests.h"
 
-int main(int args) {
-	UniqueTests tester;
-	tester.test1();
-	return 0;
-}
+
+
+#include "Component.h"
+
