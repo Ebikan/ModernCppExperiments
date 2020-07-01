@@ -19,7 +19,6 @@ GOManager::GOManager() noexcept
 {
 	Trace("ctor GOM");
 	pool.resize(static_cast<int>(Cat::CategoryCount));
-	//pool.at(static_cast<int>(Cat::Hazards)).resize(30);
 }
 
 GOManager::~GOManager() noexcept

@@ -18,7 +18,7 @@
 #include "Weapon.h"
 #include "GameObject.h"
 
-GameObject::GameObject() noexcept : 
+GameObject::GameObject()  : 
 	id(1u), fData(0.f), alive(false), destroy(false)
 {
 	Trace("ctor GO");
@@ -38,3 +38,7 @@ GameObject::GameObject(GameObject&& go) noexcept
 	weapon = std::move(go.weapon);
 }
 
+char const* GameObject::Exception::GetType() const noexcept
+{
+	return "GameObject Exception";
+}

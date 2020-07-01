@@ -13,6 +13,7 @@
 
 ******************************************************************************/
 #include <memory>
+#include "BaseException.h"
 
 // Data type
 typedef long long GOUID;
@@ -25,7 +26,14 @@ class GameObject {
 
 public:
 
-	GameObject() noexcept;
+	class Exception : public BaseException
+	{
+	public:
+		using BaseException::BaseException;
+		virtual char const* GetType() const noexcept;
+	};
+
+	GameObject() ;
 	~GameObject() noexcept;
 	GameObject(GameObject&&) noexcept;
 
