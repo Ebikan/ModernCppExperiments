@@ -12,7 +12,11 @@
 	email:	evie@eviebrown.com
 
 ******************************************************************************/
+#include <iostream>
 #include "GameObject.h"
 #include "GOManager.h"
 
-
+GOManager::GOManager() noexcept
+{
+	std::cout << "GOM ctor" << std::endl;
+}

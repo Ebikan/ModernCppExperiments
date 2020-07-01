@@ -22,6 +22,17 @@ class GameObject;
 class GOManager {
 public:
 
+	// The categories of game objects
+	enum class Cat
+	{
+		Players,
+		Projectiles,
+		AliveParticles,
+		DeadParticles,
+		Hazards,
+		Tiles,
+		CategoryCount,
+	};
 
 
 	GOManager() noexcept;
@@ -32,6 +43,7 @@ public:
 	GOManager& operator=(GOManager&&) = delete;
 
 private:
-	std::vector<std::forward_list<GameObject>> a;
+	//static array of GO lists
+	std::vector<GameObject> a[static_cast<size_t> (Cat::CategoryCount)];
 
 };
