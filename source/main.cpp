@@ -13,9 +13,12 @@
 
 ******************************************************************************/
 #include "UniqueTests.h"
+#include "GOManager.h"
 
 int main(int args) {
-	UniqueTests tester;
-	tester.test1();
+	GOManager manager1, manager2;
+	manager1.Add(GOManager::Cat::Players);
+	manager1.Add(GOManager::Cat::Hazards);
+	auto something = manager1.cend(GOManager::Cat::Hazards);
 	return 0;
 }

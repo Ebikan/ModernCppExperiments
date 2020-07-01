@@ -17,7 +17,8 @@
 #include <iostream>
 #include "Trace.h"
 
-void Trace(const char str[])
+
+void Trace(std::string str)
 {
 	std::cout << str << std::endl;
 }

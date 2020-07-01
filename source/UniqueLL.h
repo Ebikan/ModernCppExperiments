@@ -35,10 +35,10 @@ public:
 	~UniqueLL();
 
 	void AddFront(int data);
-	void RemoveFront();
+	void RemoveFront() noexcept;
 
 	void AddAt(int pos, int data);
-	int Get(int pos) const;
+	int Get(int pos) const noexcept;
 	
 	void print();
 

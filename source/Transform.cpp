@@ -17,3 +17,13 @@
 
 #include "Transform.h"
 
+
+Transform::Transform() noexcept : global(1.f), local(0.f)
+{
+	Trace("ctor Transform");
+}
+
+Transform::~Transform() noexcept
+{
+	Trace("dtor Transform");
+}

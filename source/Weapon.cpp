@@ -17,3 +17,12 @@
 
 #include "Weapon.h"
 
+Weapon::Weapon() noexcept : damage(10.f)
+{
+	Trace("ctor Weapon");
+}
+
+Weapon::~Weapon() noexcept
+{
+	Trace("dtor Weapon");
+}

@@ -17,5 +17,35 @@
 
 GOManager::GOManager() noexcept
 {
-	Trace("GOM ctor");
+	Trace("ctor GOM");
+	pool.resize(static_cast<int>(Cat::CategoryCount));
+	//pool.at(static_cast<int>(Cat::Hazards)).resize(30);
+}
+
+GOManager::~GOManager() noexcept
+{
+	Trace("dtor GOM");
+}
+
+void GOManager::Add(Cat c)
+{
+	GameObject go;
+	pool.at(static_cast<int>(c)).push_back(std::move(go));
+}
+
+std::vector<GameObject>::const_iterator GOManager::cbegin(Cat c)
+{
+	return pool.at(static_cast<int>(c)).cbegin();
+}
+std::vector<GameObject>::iterator GOManager::begin(Cat c)
+{
+	return pool.at(static_cast<int>(c)).begin();
+}
+std::vector<GameObject>::const_iterator GOManager::cend(Cat c)
+{
+	return pool.at(static_cast<int>(c)).cend();
+}
+std::vector<GameObject>::iterator GOManager::end(Cat c)
+{
+	return pool.at(static_cast<int>(c)).end();
 }

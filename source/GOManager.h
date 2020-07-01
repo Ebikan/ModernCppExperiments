@@ -12,9 +12,8 @@
 	email:	evie@eviebrown.com
 
 ******************************************************************************/
-
+#include "GameObject.h"
 #include <vector>
-#include <forward_list>
 
 // forward reference
 class GameObject;
@@ -36,14 +35,22 @@ public:
 
 
 	GOManager() noexcept;
-	~GOManager() = default;
+	~GOManager() noexcept;
 	GOManager(const GOManager&) = delete;
 	GOManager& operator=(const GOManager&) = delete;
 	GOManager(GOManager&&) = delete;
 	GOManager& operator=(GOManager&&) = delete;
 
+	void Add(Cat c);
+
+	//give access to the iterators
+	std::vector<GameObject>::const_iterator cbegin(Cat c);
+	std::vector<GameObject>::iterator begin(Cat c);
+	std::vector<GameObject>::const_iterator cend(Cat c);
+	std::vector<GameObject>::iterator end(Cat c);
+
 private:
-	//static array of GO lists
-	std::vector<GameObject> a[static_cast<size_t> (Cat::CategoryCount)];
+	// avoiding c-style array, as vector has bounds checking.
+	std::vector<std::vector<GameObject>> pool;
 
 };

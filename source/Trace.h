@@ -12,5 +12,5 @@
 	email:	evie@eviebrown.com
 
 ******************************************************************************/
-
-void Trace(const char str[]);
+#include <string>
+void Trace(std::string str);

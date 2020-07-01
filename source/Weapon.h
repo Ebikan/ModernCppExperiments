@@ -12,3 +12,19 @@
 	email:	evie@eviebrown.com
 
 ******************************************************************************/
+
+
+class Weapon {
+
+public:
+
+	Weapon() noexcept;
+	~Weapon() noexcept;
+	Weapon(const Weapon&) = delete;
+	Weapon& operator=(const Weapon&) = delete;
+	Weapon(Weapon&&) = delete;
+	Weapon& operator=(Weapon&&) = delete;
+
+private:
+	float damage;
+};

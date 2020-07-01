@@ -13,7 +13,27 @@
 
 ******************************************************************************/
 
+
+#include "Transform.h"
+#include "Weapon.h"
 #include "GameObject.h"
 
+GameObject::GameObject() noexcept : id(1u), fData(0.f)
+{
+	Trace("ctor GO");
+}
 
+GameObject::~GameObject() noexcept
+{
+	Trace("dtor GO");
+}
+
+GameObject::GameObject(GameObject&& go) noexcept
+{
+	Trace("move GO");
+	id = std::move(go.id);
+	fData = std::move(go.fData);
+	transform = std::move(go.transform);
+	weapon = std::move(go.weapon);
+}
 

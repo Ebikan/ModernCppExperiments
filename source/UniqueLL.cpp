@@ -55,7 +55,7 @@ void UniqueLL::AddFront(int data)
 	headNode = std::make_unique<Node>(data, std::move(headNode));
 }
 
-void UniqueLL::RemoveFront()
+void UniqueLL::RemoveFront() noexcept
 {
 	headNode = std::move(headNode->next);
 }
@@ -73,7 +73,7 @@ void UniqueLL::AddAt(int pos, int data)
 	curr->next = std::make_unique<Node>(data, std::move(curr->next));;
 }
 
-int UniqueLL::Get(int pos) const
+int UniqueLL::Get(int pos) const noexcept
 {
 	Node const* curr = headNode.get();
 	for (int i = 0; curr->next && i < pos; i++) {

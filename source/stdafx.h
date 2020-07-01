@@ -12,5 +12,5 @@
 	email:	evie@eviebrown.com
 
 ******************************************************************************/
-
+#pragma warning(disable:26432)
 #include "Trace.h"
