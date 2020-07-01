@@ -22,6 +22,9 @@
     <Filter Include="Source Files\Component Architecture">
       <UniqueIdentifier>{ea70f28b-b434-4e18-a69f-fb39627b37e8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Component Architecture\Components">
+      <UniqueIdentifier>{14bf39c0-81b4-4487-9b98-69a764101f1b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\main.cpp">
@@ -36,23 +39,23 @@
     <ClCompile Include="source\Component.cpp">
       <Filter>Source Files\Component Architecture</Filter>
     </ClCompile>
-    <ClCompile Include="source\Transform.cpp">
-      <Filter>Source Files\Component Architecture</Filter>
-    </ClCompile>
-    <ClCompile Include="source\Weapon.cpp">
-      <Filter>Source Files\Component Architecture</Filter>
-    </ClCompile>
     <ClCompile Include="source\stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="source\UniqueLL.cpp">
       <Filter>Source Files\Structures</Filter>
     </ClCompile>
+    <ClCompile Include="source\Transform.cpp">
+      <Filter>Source Files\Component Architecture\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Weapon.cpp">
+      <Filter>Source Files\Component Architecture\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="source\GOManager.cpp">
+      <Filter>Source Files\Component Architecture</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="source\UniqueTests.h">
-      <Filter>Source Files\Tests</Filter>
-    </ClInclude>
     <ClInclude Include="source\GameObject.h">
       <Filter>Source Files\Component Architecture</Filter>
     </ClInclude>
@@ -60,16 +63,22 @@
       <Filter>Source Files\Component Architecture</Filter>
     </ClInclude>
     <ClInclude Include="source\Transform.h">
-      <Filter>Source Files\Component Architecture</Filter>
+      <Filter>Source Files\Component Architecture\Components</Filter>
     </ClInclude>
     <ClInclude Include="source\Weapon.h">
-      <Filter>Source Files\Component Architecture</Filter>
-    </ClInclude>
-    <ClInclude Include="source\stdafx.h">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Component Architecture\Components</Filter>
     </ClInclude>
     <ClInclude Include="source\UniqueLL.h">
-      <Filter>Source Files\Structures</Filter>
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\UniqueTests.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\GOManager.h">
+      <Filter>Source Files\Component Architecture</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -153,6 +153,7 @@
   <ItemGroup>
     <ClCompile Include="source\Component.cpp" />
     <ClCompile Include="source\GameObject.cpp" />
+    <ClCompile Include="source\GOManager.cpp" />
     <ClCompile Include="source\main.cpp" />
     <ClCompile Include="source\stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -168,6 +169,7 @@
   <ItemGroup>
     <ClInclude Include="source\Component.h" />
     <ClInclude Include="source\GameObject.h" />
+    <ClInclude Include="source\GOManager.h" />
     <ClInclude Include="source\stdafx.h" />
     <ClInclude Include="source\Transform.h" />
     <ClInclude Include="source\UniqueLL.h" />
