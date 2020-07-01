@@ -1,21 +1,16 @@
-#include "stdafx.h"
+#pragma once
 /******************************************************************************
 
-	file:	GOManager.cpp
+	file:	Trace.h
 
 	brief:	none
 
-	date:	7/1/2020 11:45:23 AM
+	date:	7/1/2020 12:35:51 PM
 
 	author:	Evie Brown
 
 	email:	evie@eviebrown.com
 
 ******************************************************************************/
-#include "GameObject.h"
-#include "GOManager.h"
 
-GOManager::GOManager() noexcept
-{
-	Trace("GOM ctor");
-}
+void Trace(const char str[]);

@@ -54,6 +54,9 @@
     <ClCompile Include="source\GOManager.cpp">
       <Filter>Source Files\Component Architecture</Filter>
     </ClCompile>
+    <ClCompile Include="source\Trace.cpp">
+      <Filter>Source Files\Tests</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\GameObject.h">
@@ -79,6 +82,9 @@
     </ClInclude>
     <ClInclude Include="source\GOManager.h">
       <Filter>Source Files\Component Architecture</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Trace.h">
+      <Filter>Source Files\Tests</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
