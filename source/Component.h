@@ -12,11 +12,19 @@
 	email:	evie@eviebrown.com
 
 ******************************************************************************/
+#include "BaseException.h"
 
 typedef long long COMP_ID;
 
 // Abstract Class
 class Component {
+
+	class ComponentException : public BaseException {
+		using BaseException::BaseException;
+
+		virtual char const* GetType() const noexcept;
+	};
+
 
 public:
 	
@@ -28,10 +36,11 @@ public:
 	Component& operator=(Component&&) = delete;
 
 protected:
-	COMP_ID GetID() noexcept;
+	COMP_ID NewID() noexcept;
+	
 
 private:
-	static COMP_ID id;
+	static COMP_ID idTracker;
 };
 
 

@@ -20,7 +20,7 @@ char const* BaseException::GetType() const noexcept
 	return "BaseException";
 }
 
-char const* BaseException::what() const noexcept
+char const* BaseException::what() const
 {
 	using namespace std;
 	std::stringstream buffer;

@@ -13,7 +13,20 @@
 
 ******************************************************************************/
 
-
-
 #include "Component.h"
 
+COMP_ID Component::idTracker = 0;
+
+COMP_ID Component::NewID() noexcept
+{
+	// critical state?
+	++idTracker;
+	// end critical state?
+
+	return idTracker;
+}
+
+char const* Component::ComponentException::GetType() const noexcept
+{
+	return "Component Exception";
+}

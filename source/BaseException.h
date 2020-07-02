@@ -23,7 +23,7 @@ public:
 
 	BaseException(std::string file, int line) noexcept : file(file), line(line) {};
 	virtual char const* GetType() const noexcept;
-	virtual char const* what() const noexcept;
+	char const* what() const override;
 
 
 private:

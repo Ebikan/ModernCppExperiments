@@ -30,7 +30,7 @@ public:
 	{
 	public:
 		using BaseException::BaseException;
-		virtual char const* GetType() const noexcept;
+		char const* GetType() const noexcept override;
 	};
 
 	GameObject() ;
@@ -42,7 +42,12 @@ public:
 	GameObject& operator=(const GameObject&) = delete;
 	GameObject& operator=(GameObject&&) = delete;
 
+protected:
+	GOUID NewID() noexcept;
+
 private:
+	static GOUID idTracker;
+	
 	GOUID id;
 	bool destroy;
 	bool alive;

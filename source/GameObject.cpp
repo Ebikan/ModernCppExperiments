@@ -18,8 +18,19 @@
 #include "Weapon.h"
 #include "GameObject.h"
 
+GOUID GameObject::idTracker = 0;
+
+GOUID GameObject::NewID() noexcept
+{
+	// critical state?
+	++idTracker;
+	// end critical state?
+
+	return idTracker;
+}
+
 GameObject::GameObject()  : 
-	id(1u), fData(0.f), alive(false), destroy(false)
+	fData(0.f), alive(false), destroy(false), id(NewID())
 {
 	Trace("ctor GO");
 }
@@ -33,6 +44,8 @@ GameObject::GameObject(GameObject&& go) noexcept
 {
 	Trace("move GO");
 	id = std::move(go.id);
+	destroy = std::move(go.destroy);
+	alive = std::move(go.alive);
 	fData = std::move(go.fData);
 	transform = std::move(go.transform);
 	weapon = std::move(go.weapon);
