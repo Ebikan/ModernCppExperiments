@@ -12,11 +12,12 @@
 	email:	evie@eviebrown.com
 
 ******************************************************************************/
-#include "GameObject.h"
+
 #include <vector>
 
 // forward reference
-class GameObject;
+typedef class Component Component;
+typedef class GameObject GameObject;
 
 class GOManager {
 public:
@@ -41,7 +42,9 @@ public:
 	GOManager(GOManager&&) = delete;
 	GOManager& operator=(GOManager&&) = delete;
 
-	void Add(Cat c);
+
+	GameObject& AddGO(Cat c);
+
 
 	//give access to the iterators
 	std::vector<GameObject>::const_iterator cbegin(Cat c);

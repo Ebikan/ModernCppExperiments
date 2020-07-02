@@ -17,6 +17,7 @@
 #include "Transform.h"
 #include "Weapon.h"
 #include "GameObject.h"
+#include <memory>
 
 GOUID GameObject::idTracker = 0;
 

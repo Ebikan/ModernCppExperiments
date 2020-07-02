@@ -12,9 +12,9 @@
 	email:	evie@eviebrown.com
 
 ******************************************************************************/
+#include "Component.h"
 
-
-class Weapon {
+class Weapon : public Component {
 
 public:
 

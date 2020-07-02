@@ -16,20 +16,26 @@
 
 typedef long long COMP_ID;
 
-// Abstract Class
+// Base Class for Components. Should not be created.
 class Component {
 
+public:
 	class ComponentException : public BaseException {
 		using BaseException::BaseException;
-
-		virtual char const* GetType() const noexcept;
+		char const* GetType() const noexcept override;
 	};
 
+	enum class Name {
+		Transform,
+		Weapon,
+	};
+
+protected:
+	// Only allow derived classes to call constructor
+	Component() = default;
 
 public:
-	
-	Component() = delete;
-	~Component() = delete;
+	~Component() = default;
 	Component(const Component&) = delete;
 	Component& operator=(const Component&) = delete;
 	Component(Component&&) = delete;

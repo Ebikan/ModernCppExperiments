@@ -19,6 +19,7 @@ GOManager::GOManager() noexcept
 {
 	Trace("ctor GOM");
 	pool.resize(static_cast<int>(Cat::CategoryCount));
+	pool.at(static_cast<int>(Cat::Players)).reserve(50000);
 }
 
 GOManager::~GOManager() noexcept
@@ -26,10 +27,9 @@ GOManager::~GOManager() noexcept
 	Trace("dtor GOM");
 }
 
-void GOManager::Add(Cat c)
+GameObject& GOManager::AddGO(Cat c)
 {
-	GameObject go;
-	pool.at(static_cast<int>(c)).push_back(std::move(go));
+	return pool.at(static_cast<int>(c)).emplace_back();
 }
 
 std::vector<GameObject>::const_iterator GOManager::cbegin(Cat c)

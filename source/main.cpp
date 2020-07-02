@@ -15,10 +15,15 @@
 #include "UniqueTests.h"
 #include "GOManager.h"
 
+#include "GameObject.h"
+
 int main(int args) {
 	GOManager manager1, manager2;
-	manager1.Add(GOManager::Cat::Players);
-	manager1.Add(GOManager::Cat::Hazards);
+	GameObject& go = manager1.AddGO(GOManager::Cat::Players);
+	Transform& t = go.AddTransform();
+
+	manager1.AddGO(GOManager::Cat::Hazards);
+	manager1.AddGO(GOManager::Cat::Players);
 	auto something = manager1.cend(GOManager::Cat::Hazards);
 	return 0;
 }

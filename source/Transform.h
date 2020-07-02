@@ -12,11 +12,12 @@
 	email:	evie@eviebrown.com
 
 ******************************************************************************/
+#include "Component.h"
 
 //example mat. not actually matrix.
 typedef float Matrix4x4;
 
-class Transform {
+class Transform : public Component {
 
 public:
 

@@ -14,6 +14,8 @@
 ******************************************************************************/
 #include <memory>
 #include "BaseException.h"
+#include "Component.h"
+#include "Transform.h"
 
 // Data type
 typedef long long GOUID;
@@ -42,6 +44,11 @@ public:
 	GameObject& operator=(const GameObject&) = delete;
 	GameObject& operator=(GameObject&&) = delete;
 
+	template <typename... Args>
+	Transform& AddTransform(Args... args);
+	template <typename... Args>
+	Weapon& AddWeapon(Args... args);
+
 protected:
 	GOUID NewID() noexcept;
 
@@ -54,6 +61,17 @@ private:
 	float fData;
 	std::unique_ptr<Transform> transform;
 	std::unique_ptr<Weapon> weapon;
-
-
 };
+
+
+template <typename... Args>
+Transform& GameObject::AddTransform(Args... args) {
+	transform = std::make_unique<Transform>(args...);
+	return *transform.get();
+}
+template <typename... Args>
+Weapon& GameObject::AddWeapon(Args... args) {
+	weapon = std::make_unique<Weapon>(args...);
+	return *weapon.get();
+}
+
