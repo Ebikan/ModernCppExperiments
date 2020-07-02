@@ -63,6 +63,9 @@
     <ClCompile Include="source\BaseException.cpp">
       <Filter>Source Files\Exception</Filter>
     </ClCompile>
+    <ClCompile Include="source\EngineTests.cpp">
+      <Filter>Source Files\Tests</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\GameObject.h">
@@ -94,6 +97,9 @@
     </ClInclude>
     <ClInclude Include="source\BaseException.h">
       <Filter>Source Files\Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="source\EngineTests.h">
+      <Filter>Source Files\Tests</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
