@@ -33,17 +33,17 @@ GOUID GameObject::NewID() noexcept
 GameObject::GameObject()  : 
 	fData(0.f), alive(false), destroy(false), id(NewID())
 {
-	Trace("ctor GO");
+	//Trace("ctor GO");
 }
 
 GameObject::~GameObject() noexcept
 {
-	Trace("dtor GO");
+	//Trace("dtor GO");
 }
 
 GameObject::GameObject(GameObject&& go) noexcept
 {
-	Trace("move GO");
+	//Trace("move GO");
 	id = std::move(go.id);
 	destroy = std::move(go.destroy);
 	alive = std::move(go.alive);

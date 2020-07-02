@@ -20,10 +20,10 @@
 
 Transform::Transform() noexcept : global(1.f), local(0.f)
 {
-	Trace("ctor Transform");
+	//Trace("ctor Transform");
 }
 
 Transform::~Transform() noexcept
 {
-	Trace("dtor Transform");
+	//Trace("dtor Transform");
 }

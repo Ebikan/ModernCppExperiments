@@ -51,6 +51,7 @@ public:
 	std::vector<GameObject>::iterator begin(Cat c);
 	std::vector<GameObject>::const_iterator cend(Cat c);
 	std::vector<GameObject>::iterator end(Cat c);
+	std::vector<GameObject>::const_iterator clast(Cat c);
 
 private:
 	// avoiding c-style array, as vector has bounds checking.
