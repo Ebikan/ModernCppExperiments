@@ -33,6 +33,7 @@ GOUID GameObject::NewID() noexcept
 	// end critical state?
 
 	return idTracker;
+	
 }
 
 GameObject::GameObject()  : 

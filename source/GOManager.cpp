@@ -20,7 +20,6 @@
 GOManager::GOManager() noexcept
 {
 	Trace("ctor GOM");
-	pool.resize(static_cast<int>(Cat::CategoryCount));
 }
 
 GOManager::~GOManager() noexcept
@@ -28,7 +27,7 @@ GOManager::~GOManager() noexcept
 	Trace("dtor GOM");
 }
 
-bool IsDestroyGlo(GameObject const& go) {
+bool IsDestroyGlo(GameObject const& go) noexcept {
 	return go.IsDestroy();
 }
 

@@ -13,7 +13,7 @@
 
 ******************************************************************************/
 
-#include <vector>
+#include <array>
 #include <forward_list>
 
 // forward reference
@@ -58,6 +58,6 @@ private:
 	// avoiding c-style array, as std::array has bounds checking.
 	// using forward list for GO holding, since its iterators do not get invalidated.
 
-	std::vector<std::forward_list<GameObject>> pool;
+	std::array<std::forward_list<GameObject>, static_cast<size_t>(Cat::CategoryCount)> pool;
 
 };
