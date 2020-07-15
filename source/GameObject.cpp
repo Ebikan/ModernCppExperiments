@@ -60,6 +60,9 @@ GameObject::GameObject(GameObject&& go) noexcept
 
 GameObject& GameObject::operator=(GameObject&& go) noexcept
 {
+	if (this->id == go.id) {
+		return *this;
+	}
 	id = std::move(go.id);
 	destroy = std::move(go.destroy);
 	alive = std::move(go.alive);

@@ -46,6 +46,8 @@ public:
 
 	GameObject& AddGO(Cat c);
 
+
+	// Should be called each frame end, before draw call.
 	size_t Destroyer();
 
 	//give access to the iterators
