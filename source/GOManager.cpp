@@ -31,7 +31,7 @@ bool IsDestroyGlo(GameObject const& go) noexcept {
 	return go.IsDestroy();
 }
 
-size_t GOManager::Destroyer() {
+size_t GOManager::RunDestroyer() {
 	size_t remCnt = 0;
 	for (auto& e : pool)
 		remCnt += e.remove_if([](GameObject& g) noexcept -> bool { return g.IsDestroy(); } );

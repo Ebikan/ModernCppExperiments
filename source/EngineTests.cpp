@@ -32,9 +32,10 @@ void TenMil1(int args) {
 	std::chrono::steady_clock clock;
 	std::chrono::time_point const start = clock.now();
 
-	for (int i = 0; i < 10000000; i++) {
+	for (int i = 0; i < 1000; i++) {
 		GameObject& go = manager1.AddGO(GOManager::Cat::Players);
 		go.AddTransform();
+		go.Destroy();
 	}
 
 	std::chrono::time_point const end = clock.now();
@@ -43,6 +44,13 @@ void TenMil1(int args) {
 		<< std::endl;
 
 
-	manager1.AddGO(GOManager::Cat::Hazards);
+	manager1.AddGO(GOManager::Cat::Hazards).Destroy();
+
 	manager1.AddGO(GOManager::Cat::Players);
+
+	
+	std::cout << manager1.RunDestroyer() << std::endl;
+
+	return;
+
 }

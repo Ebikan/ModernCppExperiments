@@ -50,6 +50,7 @@ public:
 	Weapon& AddWeapon(Args... args);
 
 	bool IsDestroy() const noexcept;
+	void Destroy() noexcept;
 
 protected:
 	GOUID NewID() noexcept;

@@ -48,7 +48,7 @@ public:
 
 
 	// Should be called each frame end, before draw call.
-	size_t Destroyer();
+	size_t RunDestroyer();
 
 	//give access to the iterators
 	std::forward_list<GameObject>::const_iterator cbegin(Cat c);

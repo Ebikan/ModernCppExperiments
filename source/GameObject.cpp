@@ -26,6 +26,11 @@ bool GameObject::IsDestroy() const noexcept
 	return destroy;
 }
 
+void GameObject::Destroy() noexcept
+{
+	destroy = true;
+}
+
 GOUID GameObject::NewID() noexcept
 {
 	// critical state?
