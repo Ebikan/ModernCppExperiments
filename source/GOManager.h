@@ -13,7 +13,8 @@
 
 ******************************************************************************/
 
-#include <vector>
+#include <array>
+#include <forward_list>
 
 // forward reference
 typedef class Component Component;
@@ -46,15 +47,19 @@ public:
 	GameObject& AddGO(Cat c);
 
 
+	// Should be called each frame end, before draw call.
+	size_t RunDestroyer();
+
 	//give access to the iterators
-	std::vector<GameObject>::const_iterator cbegin(Cat c);
-	std::vector<GameObject>::iterator begin(Cat c);
-	std::vector<GameObject>::const_iterator cend(Cat c);
-	std::vector<GameObject>::iterator end(Cat c);
-	std::vector<GameObject>::const_iterator clast(Cat c);
+	std::forward_list<GameObject>::const_iterator cbegin(Cat c);
+	std::forward_list<GameObject>::iterator begin(Cat c);
+	std::forward_list<GameObject>::const_iterator cend(Cat c);
+	std::forward_list<GameObject>::iterator end(Cat c);
 
 private:
-	// avoiding c-style array, as vector has bounds checking.
-	std::vector<std::vector<GameObject>> pool;
+	// avoiding c-style array, as std::array has bounds checking.
+	// using forward list for GO holding, since its iterators do not get invalidated.
+
+	std::array<std::forward_list<GameObject>, static_cast<size_t>(Cat::CategoryCount)> pool;
 
 };

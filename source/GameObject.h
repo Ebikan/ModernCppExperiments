@@ -38,16 +38,19 @@ public:
 	GameObject() ;
 	~GameObject() noexcept;
 	GameObject(GameObject&&) noexcept;
-
+	GameObject& operator=(GameObject&&) noexcept;
 
 	GameObject(const GameObject&) = delete;
 	GameObject& operator=(const GameObject&) = delete;
-	GameObject& operator=(GameObject&&) = delete;
+	
 
 	template <typename... Args>
 	Transform& AddTransform(Args... args);
 	template <typename... Args>
 	Weapon& AddWeapon(Args... args);
+
+	bool IsDestroy() const noexcept;
+	void Destroy() noexcept;
 
 protected:
 	GOUID NewID() noexcept;

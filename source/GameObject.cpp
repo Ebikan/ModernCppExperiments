@@ -21,6 +21,16 @@
 
 GOUID GameObject::idTracker = 0;
 
+bool GameObject::IsDestroy() const noexcept
+{
+	return destroy;
+}
+
+void GameObject::Destroy() noexcept
+{
+	destroy = true;
+}
+
 GOUID GameObject::NewID() noexcept
 {
 	// critical state?
@@ -28,6 +38,7 @@ GOUID GameObject::NewID() noexcept
 	// end critical state?
 
 	return idTracker;
+	
 }
 
 GameObject::GameObject()  : 
@@ -51,6 +62,22 @@ GameObject::GameObject(GameObject&& go) noexcept
 	transform = std::move(go.transform);
 	weapon = std::move(go.weapon);
 }
+
+GameObject& GameObject::operator=(GameObject&& go) noexcept
+{
+	if (this->id == go.id) {
+		return *this;
+	}
+	id = std::move(go.id);
+	destroy = std::move(go.destroy);
+	alive = std::move(go.alive);
+	fData = std::move(go.fData);
+	transform = std::move(go.transform);
+	weapon = std::move(go.weapon);
+	return *this;
+}
+
+
 
 char const* GameObject::Exception::GetType() const noexcept
 {
