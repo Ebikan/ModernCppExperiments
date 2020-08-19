@@ -32,7 +32,7 @@ void TenMil1(int args) {
 	std::chrono::steady_clock clock;
 	std::chrono::time_point const start = clock.now();
 
-	for (int i = 0; i < 1000; i++) {
+	for (int i = 0; i < 10000000; i++) {
 		GameObject& go = manager1.AddGO(GOManager::Cat::Players);
 		go.AddTransform();
 		go.Destroy();

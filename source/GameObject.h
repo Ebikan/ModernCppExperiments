@@ -64,12 +64,12 @@ private:
 	float fData;
 	std::unique_ptr<Transform> transform;
 	std::unique_ptr<Weapon> weapon;
+
 };
 
-
 template <typename... Args>
-Transform& GameObject::AddTransform(Args... args) {
-	transform = std::make_unique<Transform>(args...);
+Transform& GameObject::AddTransform(Args... u) {
+	transform = std::make_unique<Transform>(u...);
 	return *transform.get();
 }
 template <typename... Args>
@@ -77,4 +77,3 @@ Weapon& GameObject::AddWeapon(Args... args) {
 	weapon = std::make_unique<Weapon>(args...);
 	return *weapon.get();
 }
-
